@@ -4,7 +4,7 @@
 // 4. Решить основную задачу (по блок-схеме)
 // 5. Вывести результат в консоль
 
-/* string[] baseArray = new string[]
+string[] baseArray = new string[]
 {
     "Самара", "Омск", "Казань", "Челябинск", "Ростов-на-Дону", "Уфа",
     "Волгоград", "Пермь", "арм", "бел", "боп", "газ", "дук", "ева",
@@ -14,12 +14,6 @@
     "уок", "хек", "циф", "аш", "ло", "но", "од", "он", "ра", "ре",
     "хи", "цы", "ял", "Томск", "Пенза", "Липецк", "Тула", "Киров",
     "Брянск", "Курск", "Иваново", "Сочи", "Курган", "Смоленск"
-}; */
-
-
-string[] baseArray = new string[]
-{
-    "Самара", "Омск", "Казань", "Челябинск", "Ростов-на-Дону", "Волгоград"
 };
 
 string[] CreateArray(int count)
@@ -72,7 +66,6 @@ string PrintArray(string[] array)
     }
 
     if (lengthArray == 0) result += "00";
-
     int lengthResult = result.Length;
     result = result.Remove(lengthResult - 2, 2);
     result += "]";
@@ -82,6 +75,5 @@ string PrintArray(string[] array)
 var createdArray = CreateArray(5);
 FillArray(createdArray, baseArray, 1, baseArray.Length);
 var outputArray = SolutionMainTask(createdArray);
-Console.WriteLine(outputArray.Length);
 Console.WriteLine($"Основной массив -> {PrintArray(createdArray)}");
 Console.WriteLine($"Сформированный массив -> {PrintArray(outputArray)}");
