@@ -16,3 +16,7 @@ string[] baseArray = new string[]
     "Брянск", "Курск", "Иваново", "Сочи", "Курган", "Смоленск"
 };
 
+string[] CreateArray(int count)
+{
+    return new string[count];
+}
