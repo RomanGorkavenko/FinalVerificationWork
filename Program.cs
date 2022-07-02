@@ -35,13 +35,14 @@ string[] SolutionMainTask(string[] createdArray)
 {
     int lengthOutputArray = 0;
     int lengthCreatedArray = createdArray.Length;
-    string[] outputArray = new string[lengthOutputArray];
 
     for (int i = 0; i < lengthCreatedArray; i++)
     {
         if (createdArray[i].Length <= 3) lengthOutputArray++;
     }
 
+    string[] outputArray = new string[lengthOutputArray];
+    
     int index = 0;
     for (int j = 0; j < lengthCreatedArray; j++)
     {
@@ -68,4 +69,6 @@ string Print(string[] array)
 
 var createdArray = CreateArray(5);
 FillArray(createdArray, baseArray, 1, baseArray.Length);
+var outputArray = SolutionMainTask(createdArray);
 Console.WriteLine($"Основной массив -> {Print(createdArray)}");
+Console.WriteLine($"Сформированный массив -> {Print(outputArray)}");
