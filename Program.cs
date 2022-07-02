@@ -31,6 +31,30 @@ void FillArray(string[] array, string[] basic, int min, int max)
     }
 }
 
+string[] SolutionMainTask(string[] createdArray)
+{
+    int lengthOutputArray = 0;
+    int lengthCreatedArray = createdArray.Length;
+    string[] outputArray = new string[lengthOutputArray];
+
+    for (int i = 0; i < lengthCreatedArray; i++)
+    {
+        if (createdArray[i].Length <= 3) lengthOutputArray++;
+    }
+
+    int index = 0;
+    for (int j = 0; j < lengthCreatedArray; j++)
+    {
+        if (createdArray[j].Length <= 3)
+        {
+            outputArray[index] = createdArray[j];
+            index++;
+        }
+    }
+
+    return outputArray;
+}
+
 string Print(string[] array)
 {
     string result = String.Empty;
