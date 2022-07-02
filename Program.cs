@@ -42,7 +42,7 @@ string[] SolutionMainTask(string[] createdArray)
     }
 
     string[] outputArray = new string[lengthOutputArray];
-    
+
     int index = 0;
     for (int j = 0; j < lengthCreatedArray; j++)
     {
@@ -56,19 +56,22 @@ string[] SolutionMainTask(string[] createdArray)
     return outputArray;
 }
 
-string Print(string[] array)
+string PrintArray(string[] array)
 {
-    string result = String.Empty;
-    int len = array.Length;
-    for (int i = 0; i < len; i++)
-    {  
-        result += $"{array[i]} ";
+    string result = "[";
+    int lengthArray = array.Length;
+    for (int i = 0; i < lengthArray; i++)
+    {
+        result += $"{array[i]}, ";
     }
+    int lengthResult = result.Length;
+    result = result.Remove(lengthResult - 2, 2);
+    result += "]";
     return result;
 }
 
 var createdArray = CreateArray(5);
 FillArray(createdArray, baseArray, 1, baseArray.Length);
 var outputArray = SolutionMainTask(createdArray);
-Console.WriteLine($"Основной массив -> {Print(createdArray)}");
-Console.WriteLine($"Сформированный массив -> {Print(outputArray)}");
+Console.WriteLine($"Основной массив -> {PrintArray(createdArray)}");
+Console.WriteLine($"Сформированный массив -> {PrintArray(outputArray)}");
