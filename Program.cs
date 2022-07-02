@@ -20,3 +20,14 @@ string[] CreateArray(int count)
 {
     return new string[count];
 }
+
+void FillArray(string[] array, string[] basic, int min, int max)
+{
+    int length = array.Length;
+    int randomElement = new Random().Next(min, max);
+    for (int i = 0; i < length; i++)
+    {
+        array[i] = basic[randomElement];
+    }
+}
+
